@@ -28,6 +28,6 @@ enquiry.nonce = nonce;
 enquiry.valid();
 enquiry.submitEnquiry(function(response)
 {
-	// Callback code here
+  // Callback code here
 });
 var errors = enquiry.getErrors();
