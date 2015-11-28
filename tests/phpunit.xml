@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<phpunit bootstrap="bootstrap.php">
+  <testsuites>
+    <testsuite name="library">
+      <file>app/library/ArticlesTest.php</file>
+      <file>app/library/CategoriesTest.php</file>
+    </testsuite>
+    <testsuite name="models">
+      <file>app/models/ArticleTest.php</file>
+      <file>app/models/CategoryTest.php</file>
+      <file>app/models/CommentTest.php</file>
+      <file>app/models/EnquiryTest.php</file>
+      <file>app/models/UserTest.php</file>
+    </testsuite>
+  </testsuites>
+</phpunit>

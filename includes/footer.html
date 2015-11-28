@@ -1,0 +1,56 @@
+    <section id="contact">
+      <div class="constrain">
+        <h1>Say Hello</h1>
+        <?php if ( !empty($errors) && is_array($errors) ) { ?>
+        <ul class="errors">
+          <?php foreach($errors as $error) { ?>
+            <li><?php echo $error ?></li>
+          <?php } ?>
+        </ul>
+        <?php } ?>
+        <?php if (!isset($success)) { ?>
+        <form method="post" action="#contact" id="contactForm">
+          <div class="row cf">
+            <label for="name">Name</label>
+            <input type="text" name="name" id="name" class="text">
+          </div>
+          <div class="row cf">
+            <label for="email">Email</label>
+            <input type="text" name="email" id="email" class="text">
+          </div>
+          <div class="row cf">
+            <label for="enquiry">Enquiry</label>
+            <textarea name="enquiry" id="enquiry" class="text"></textarea>
+          </div>
+          <div class="row cf">
+            <input type="submit" name="submit" id="submitEnquiry" value="Send" class="button">
+          </div>
+        </form>
+        <?php } else { ?>
+        <div class="success">
+          <p>Thank you very much for your enquiry.</p>
+        </div>
+        <?php } ?>
+      </div>
+    </section>
+    <footer>
+      <div class="constrain">
+        <span>Jengnet &copy 2015</span>
+      </div>
+    </footer>
+  </body>
+  <script type="text/javascript">var nonce = '<?php echo $this->_nonce; ?>';</script>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script type="text/javascript" src="/assets/js/init.min.js"></script>
+
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-625472-1', 'auto');
+    ga('send', 'pageview');
+
+  </script>
+</html>

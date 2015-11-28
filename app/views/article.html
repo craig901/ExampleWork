@@ -1,0 +1,86 @@
+<?php include(APP_ROOT . '/includes/header.html'); ?>
+
+  <article id="article">
+    <span class="category"><?php echo $article->getIcon(); ?></span>
+    <h1><?php echo $article->title; ?></h1>
+    <div class="details">
+      <span class="author">Craig Bullock</span>
+      <span class="date"><?php echo $article->getDate(); ?></span>
+    </div>
+    <div class="body">
+      <?php echo $article->body; ?>
+    </div>
+  </article>
+  <section id="comments">
+    <div class="constrain">
+      <h2>(<?php echo count($article->comments); ?>) Comments</h2>
+      <div data-target="comments-holder">
+      <?php
+      if ( $article->comments )
+      {
+        foreach( $article->comments as $comment )
+        {
+          echo $comment->getTemplate();
+        }
+      }
+      else
+      {
+        ?><p class="noComments">This article has not received any comments yet.</p><?php
+      }
+      ?>
+      </div>
+      <h2 class="haveYourSay">Have your say</h2>
+      <form method="post" id="commentForm">
+        <div class="row cf">
+          <label for="comment_name">Name</label>
+          <input type="text" name="comment_name" id="comment_name" class="text">
+        </div>
+        <div class="row cf">
+          <label for="comment_email">Email</label>
+          <input type="text" name="comment_email" id="comment_email" class="text">
+        </div>
+        <div class="row cf">
+          <label for="website">Web Site</label>
+          <input type="text" name="website" id="website" class="text">
+        </div>
+        <div class="row cf">
+          <label for="comment">Comment</label>
+          <textarea name="comment" id="comment"></textarea>
+        </div>
+        <div class="row cf">
+          <input type="submit" name="submit_comment" id="submit_comment" value="Add Comment">
+        </div>
+        <input type="hidden" name="article_id" value="<?php echo $article->id; ?>">
+      </form>
+    </div>
+  </section>
+  <section id="moreArticles">
+    <div class="constrain">
+      <div class="articlesOuter">
+        <h2>Related Articles</h2>
+        <div class="articles cf">
+        <?php if (isset($articles) && !empty($articles)) { ?>
+          <?php foreach($articles as $article) { ?>
+            <div class="article">
+              <div class="date">
+                <span><?php echo $article->getMonth(); ?></span>
+                <span><?php echo $article->getYear(); ?></span>
+              </div>
+              <div class="details">
+                <h3><a href="/article/<?php echo $article->slug; ?>"><span><i class="fa fa-angle-right"></i>&nbsp;</span><?php echo $article->title; ?></a></h3>
+                <p><?php echo $article->excerpt; ?></p>
+              </div>
+            </div>
+          <?php } ?>
+        <?php } ?>
+      </div>
+      <?php /*
+      <pre>
+      <?php var_dump($articles); ?>
+      </pre>
+      */ ?>
+
+    </div>
+  </section>
+
+<?php include(APP_ROOT . '/includes/footer.html'); ?>

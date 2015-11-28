@@ -1,0 +1,50 @@
+div#tech {
+	padding:30px 0;
+	background:#252729;
+	ul {
+		text-align:center;
+		li {
+			display:inline-block;
+			margin-right:50px;
+			opacity:0.4;
+			opacity:0;
+			transform:translateY(-10px);
+			.transitionAllQuick();
+			&.show {
+				opacity:0.4;
+				transform:translateY(0);
+			}
+			&:last-child {
+				margin-right:0;
+			}
+			&.laravel {
+				width:88px;
+				height:60px;
+				background:url('/assets/images/sprite.png') no-repeat -50px 0;
+			}
+			&.codeigniter {
+				width:46px;
+				height:60px;
+				background:url('/assets/images/sprite.png') no-repeat 0 0;
+			}
+			&.magento {
+				width:52px;
+				height:60px;
+				background:url('/assets/images/sprite.png') no-repeat -150px 0;
+			}
+			&.wordpress {
+				width:61px;
+				height:60px;
+				background:url('/assets/images/sprite.png') no-repeat -250px 0;
+			}
+			span {
+				display:none;
+			}
+		}
+	}
+}
+@media all and (max-width: 600px) {
+	div#tech {
+		display:none;
+	}
+}

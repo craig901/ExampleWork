@@ -1,0 +1,83 @@
+.cf:after
+{
+	content:".";
+	clear:both;
+	display:block;
+	height:0;
+	visibility:hidden;
+}
+
+.roundedCorners(@val) {
+   -webkit-radius:@val;
+	-moz-border-radius:@val;
+	-o-border-radius:@val;
+	border-radius:@val;
+}
+
+.transitionAllQuick() {
+	-webkit-transition: all 0.3s ease;
+	-moz-transition: all 0.3s ease;
+	-o-transition: all 0.3s ease;
+	transition: all 0.3s ease;
+}
+
+.transitionAllSlow() {
+	-webkit-transition: all 1s ease;
+	-moz-transition: all 1s ease;
+	-o-transition: all 1s ease;
+	transition: all 1s ease;
+}
+
+.dropShadow(@size, @shadow) {
+	-webkit-box-shadow: 0 0 @size @shadow;
+	-moz-box-shadow: 0 0 @size @shadow;
+	-o-box-shadow: 0 0 @size @shadow;
+	box-shadow: 0 0 @size @shadow;
+}
+
+/*
+@mixin transitionColor() {
+	-webkit-transition: color 0.3s ease;
+	-moz-transition: color 0.3s ease;
+	-o-transition: color 0.3s ease;
+	transition: color 0.3s ease;
+}
+
+@mixin transitionBackground() {
+	-webkit-transition: background 0.3s ease;
+	-moz-transition: background 0.3s ease;
+	-o-transition: background 0.3s ease;
+	transition: background 0.3s ease;
+}
+
+
+
+@mixin transitionAllSlow() {
+	-webkit-transition: all 0.9s ease;
+	-moz-transition: all 0.9s ease;
+	-o-transition: all 0.9s ease;
+	transition: all 0.9s ease;
+}
+*/
+
+
+/*.roundedCornersTop($val) {
+   	-webkit-radius:$val $val 0 0;
+	-moz-border-radius:$val $val 0 0;
+	-o-border-radius:$val $val 0 0;
+	border-radius:$val $val 0 0;
+}*/
+/*
+@mixin roundedCornersRight($val) {
+   	-webkit-radius:0 $val $val 0;
+	-moz-border-radius:0 $val $val 0;
+	-o-border-radius:0 $val $val 0;
+	border-radius:0 $val $val 0;
+}
+
+@mixin boxShadow($size, $shadow) {
+	-webkit-box-shadow: 0 0 $size $shadow;
+	-moz-box-shadow: 0 0 $size $shadow;
+	-o-box-shadow: 0 0 $size $shadow;
+	box-shadow: 0 0 $size $shadow;
+}*/

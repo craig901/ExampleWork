@@ -1,0 +1,127 @@
+body.cv {
+	padding:0 15px 15px 15px;
+	background:#f7f7f8;
+	p {
+		font-family: 'Lato';
+	}
+	div.top {
+		padding:15px;
+		margin:0 0 30px 0;
+		box-sizing:border-box;
+		background: -webkit-linear-gradient(top, #f4f7fd 0%, #ecf1fc 100%); /* Chrome10-25,Safari5.1-6 */
+		background: linear-gradient(to bottom, #f4f7fd 0%, #ecf1fc 100%);
+		div.pic {
+			float:left;
+			max-width:200px;
+			margin:0 25px 0 0;
+			img {
+				display:block;
+				max-width:100%;
+				border-radius:100%;
+			}
+		}
+		ul {
+			float:left;
+			&.details {
+				margin-right:100px;
+			}
+			li {
+				padding:0 0 10px 0;
+				list-style:none;
+				a {
+				  -webkit-transition: all 0.3s ease;
+				  -moz-transition: all 0.3s ease;
+				  -o-transition: all 0.3s ease;
+				  transition: all 0.3s ease;
+				}
+				span {
+					float:left;
+					width:125px;
+				  -webkit-transition: all 0.3s ease;
+				  -moz-transition: all 0.3s ease;
+				  -o-transition: all 0.3s ease;
+				  transition: all 0.3s ease;
+					&.icon {
+						width:35px;
+						height:35px;
+						line-height:35px;
+						text-align:center;
+						margin-right:15px;
+						color:#a89875;
+    				background:#252729;
+    				border-radius:100%;
+					}
+				}
+			}
+			&.links {
+				li {
+					line-height:35px;
+					a {
+						&:hover {
+							span.icon {
+								color:#666;
+								background:#a89875;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	div.left {
+		float:left;
+		width:40%;
+		padding:15px;
+		box-sizing:border-box;
+		h2 {
+			padding:0 0 20px 0;
+		}
+		p {
+			padding:0 0 20px 0;
+		}
+		div.testimonial {
+			padding:20px 0;
+			background: url('/assets/images/bg-dots.png') repeat-x top left;
+			div.pic {
+				float:left;
+				width:80px;
+				margin:0 25px 25px 0;
+				img {
+					display:block;
+					max-width:100%;
+					border-radius:100%;
+				}
+			}
+			h3 {
+				padding:10px 0 0 0;
+			}
+			div.content {
+				clear:left;
+			}
+		}
+	}
+	div.right {
+		float:right;
+		width:60%;
+		padding:15px 15px 15px 0;
+		box-sizing:border-box;
+		div.section {
+			padding:0 0 15px 0;
+			margin:0 0 15px 0;
+			background: url('/assets/images/bg-dots.png') repeat-x bottom left;
+			span.icon {
+				float:left;
+				width:50px;
+				height:50px;
+				line-height:50px;
+				text-align:center;
+				color:#a89875;
+				background:#252729;
+				border-radius:100%;
+			}
+			div.content {
+				padding-left:75px;
+			}
+		}
+	}
+}

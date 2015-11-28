@@ -1,0 +1,127 @@
+<?php include(APP_ROOT . '/includes/header.html'); ?>
+    <div id="banner">
+      <div class="overlay">
+        <div class="text">
+          <span>Since 2004</span>
+        </div>
+      </div>
+    </div>
+    <div id="tech">
+      <ul>
+        <li class="laravel"><span>Laravel</span></li>
+        <li class="codeigniter"><span>Codeigniter</span></li>
+        <li class="wordpress"><span>WordPress</span></li>
+        <li class="magento"><span>Magento</span></li>
+      </ul>
+    </div>
+    <section id="about">
+      <div class="constrain">
+        <h1>Camberley Web Design</h1>
+        <p>We are a digital agency based in Camberley. We work with start ups and SME's and have helped many clients since our creation in 2005.</p>
+        <p>We specialise in Laravel, Codeigniter, WordPress and Magento. We deal with every step of the development process from wireframing to design to development.</p>
+      </div>
+    </section>
+    <section id="work" class="cf">
+      <h1>Our Work</h2>
+      <div class="workHolder">
+        <div class="work">
+          <a href="http://www.floridavillas192.com/">
+            <img src="/assets/images/work/florida.jpg" alt="">
+            <div class="text">
+              <h3>FloridaVillas192.com</h3>
+              <span><i class="fa fa-angle-right"></i> View</span>
+            </div>
+          </a>
+        </div>
+        <div class="work">
+          <a href="http://www.jsaservice.com/">
+            <img src="/assets/images/work/jsa.jpg" alt="">
+            <div class="text">
+              <h3>JSAService.com</h3>
+              <span><i class="fa fa-angle-right"></i> View</span>
+            </div>
+          </a>
+        </div>
+        <div class="work">
+          <a href="http://www.plumbers-camberley.co.uk/">
+            <img src="/assets/images/work/plumbers.jpg" alt="">
+            <div class="text">
+              <h3>Plumbers-Camberley.com</h3>
+              <span><i class="fa fa-angle-right"></i> View</span>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+    <section class="content cf">
+      <div class="constrain">
+        <section id="testimonials">
+          <h1>Testimonials</h1>
+          <div class="testimonial">
+            <div class="pic">
+              <img src="/assets/images/testimonials/author.jpg" alt="">
+            </div>
+            <div class="content">
+              <h2>Florida Villas 192</h2>
+              <h3>Richard, Surrey</h3>
+              <p>We are a Vacation holiday home listing site. We carefully chose our web developers and platform after nearly years of planning. We can not thank Craig and Jengnet enough for the work they put in. Within a couple of years we had 30 properties which had collectively received well over a 100 enquiries all from organic search. We have been so impressed with this as we have not actually invested any money in SEO yet and seem to have a sustainable position in the search engines. We chose Laravel as they platform which has been great for us with the flexibility and modern features it offers.</p>
+            </div>
+          </div>
+          <div class="testimonial">
+            <div class="pic">
+              <img src="/assets/images/testimonials/paul.jpg" alt="">
+            </div>
+            <div class="content">
+              <h2><a href="http://www.showcasecreative.com/">Showcase Creative</a></h2>
+              <p>We have been working with Craig and Jengnet since 2006 when we were a start up. We are now an established brand with a strong online presence. In the early days, Craig significantly helped us with online marketing and organic SEO. In many ways this has helped shape our online presence today as we still get decent volumes of organic traffic that make up around 70% of our sales. This has been a direct result of the early work Craig put in to our SEO strategy, which we are very grateful for. We have found Craig very easy to work with and he has always gone out of his way to share his knowledge with us which has also helped with our internal decision making regarding our online E-Commerce.</p>
+              <h3>Paul Batey, MD</h3>
+            </div>
+          </div>
+          <div class="testimonial">
+            <div class="pic">
+              <img src="/assets/images/testimonials/allan.jpg" alt="">
+            </div>
+            <div class="content">
+              <h2><a href="http://www.jsaservice.com/">JSA Service</a></h2>
+              <p>Craig built us a new web site in 2014. Before that we had a very old site that we had had probably since the 1990's. We are so pleased we eventually made the decision to get a new site as our web enquiries have significantly increased and we get so much more positive feedback from our clients. Craig built us a content management system, which allows us to update our content, add new pages and organise our enquiries all from the back end. Craig was a joy to work with and we will continue using him and recommending him for all our future web related work.</p>
+              <h3>Allan Wilkinson, MD</h3>
+            </div>
+          </div>
+          <div class="testimonial">
+            <div class="pic">
+              <img src="/assets/images/testimonials/dan.jpg" alt="">
+            </div>
+            <div class="content">
+              <h2>J McCormack &amp; Sons</h2>
+              <p>Craig originally built us a new web site round a decade ago. It has proved to be very helpful as we get a number of enquiries each week from people that have found our site organically on Google. We literally do not spend any money on marketing at all as all of our business comes from existing customers or the web site. We can not thank Craig enough for the efforts he has put in to our online presence as we did not even pay him extra for SEO, ensuring the site was Google friendly was part of the site build budget. We now have a new site for 2015, which is responsive and just looks awesome. We are so happy with it as we feel our online presence is so much stronger than our competition.</p>
+              <h3>Dan McCormack, Owner</h3>
+            </div>
+          </div>
+        </section>
+        <section id="articles">
+          <h1>Articles</h1>
+          <?php
+          if (!empty($articles))
+          {
+            foreach($articles as $article)
+            {
+              ?>
+          <div class="article">
+            <div class="category">
+              <span><?php echo $article->getIcon(); ?></span>
+            </div>
+            <?php echo $article->getCommentsCount(); ?>
+            <div class="content">
+              <h2><a href="/article/<?php echo $article->slug; ?>"><?php echo $article->title; ?></a></h2>
+              <h3><?php echo $article->getDate(); ?></h3>
+              <p><?php echo $article->excerpt; ?></p>
+            </div>
+          </div>
+              <?php
+            }
+          }
+          ?>
+        </section>
+      </div>
+    </section>
+<?php include(APP_ROOT . '/includes/footer.html'); ?>

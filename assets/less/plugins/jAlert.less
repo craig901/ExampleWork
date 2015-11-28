@@ -1,0 +1,37 @@
+div.jAlert {
+	position:fixed;
+	top:50px;
+	left:50%;
+	width:400px;
+	margin-left:-200px;
+	padding:20px;
+	color:#9f957f;
+	font-weight:bold;
+	font-size:22px;
+	text-align:center;
+	background-color:rgba(37, 39, 41, 0.7);
+	z-index:9992;
+	transform:translateY(-500px);
+	.transitionAllQuick();
+	&.show {
+		transform:translateY(0);
+	}
+	div.buttons {
+		padding:20px 0 0 0;
+		a {
+			float:right;
+			padding:5px 15px;
+			margin-left:15px;
+			color:#FFF;
+			font-size:18px;
+			border:none;
+			cursor:pointer;
+			text-decoration:none;
+			background:#66593c;
+			.transitionAllQuick();
+			&:hover {
+				background:#53472e;
+			}
+		}
+	}
+}

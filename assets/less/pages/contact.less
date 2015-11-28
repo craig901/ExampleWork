@@ -1,0 +1,127 @@
+section#contact {
+	padding:30px 0;
+	background:#252729;
+	div.constrain {
+		max-width:600px;
+	}
+	h1 {
+		padding:0 0 30px 0;
+		font-size:30px;
+		color:#9f957f;
+		text-align:center;
+	}
+	div.row {
+		padding:0 0 20px 0;
+		label {
+			float:left;
+			width:150px;
+			font-size:30px;
+			color:#9f957f;
+			opacity:0;
+			.transitionAllSlow();
+			transform:translateX(-20px);
+		}
+		input.text {
+			display:block;
+			width:400px;
+			padding:2px 5px;
+			font-size:30px;
+			border:none;
+			color:#a5a29b;
+			border:1px solid transparent;
+			background:#343739;
+			box-sizing:border-box;
+			opacity:0;
+			.transitionAllSlow();
+			transform:translateY(50px);
+			&.error {
+				color:#a94442;
+				border:1px solid #b28383;
+				background:#bf9595;
+			}
+		}
+		textarea {
+			display:block;
+			width:400px;
+			height:200px;
+			padding:2px 5px;
+			font-size:30px;
+			color:#a5a29b;
+			border:none;
+			border:1px solid transparent;
+			background:#343739;
+			box-sizing:border-box;
+			opacity:0;
+			.transitionAllSlow();
+			transform:translateY(50px);
+		}
+		input.button {
+			display:block;
+			padding:10px 0;
+			margin:0 auto;
+			width:250px;
+			color:#FFF;
+			font-size:30px;
+			border:none;
+			cursor:pointer;
+			background:#66593c;
+			.transitionAllQuick();
+			opacity:0;
+			&:hover {
+				background:#53472e;
+			}
+			&.show {
+				opacity:1;
+			}
+		}
+		div.error-text {
+			padding:10px 0 10px 150px;
+			span {
+				display:block;
+				color:#a94442;
+			}
+		}
+		&.show {
+			label,input.text,textarea {
+				opacity:1;
+				transform:translateX(0px);
+				transform:translateY(0px);
+			}
+		}
+	}
+	div.success {
+		padding:100px 0;
+		text-align:center;
+		color:#12492E;
+		font-size:18px;
+		font-weight:bold;
+		background:#72b997;
+	}
+}
+@media all and (max-width: 740px) {
+	section#contact {
+		div.row {
+			label {
+				float:none;
+				display:block;
+				padding:0 0 15px 0;
+			}
+			input.text,
+			textarea {
+				display:block;
+				width:100%;
+			}
+			label,input.text,textarea {
+				opacity:1;
+				transform:translateX(0px);
+				transform:translateY(0px);
+			}
+			input.button {
+				opacity:1;
+			}
+			div.error-text {
+				padding-left:0;
+			}
+		}
+	}
+}

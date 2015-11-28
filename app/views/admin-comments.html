@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<!--[if lte IE 7]>      <html class="no-js lt-ie10 lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>          <html class="no-js lt-ie10 lt-ie9"> <![endif]-->
+<!--[if IE 9]>          <html class="no-js lt-ie10"> <![endif]-->
+<!--[if gt IE 9]><!-->  <html class="no-js"> <!--<![endif]-->
+  <head>
+    <!-- Meta Tags -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!-- Site Info -->
+    <title>Admin : Jengnet</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <link rel="apple-touch-icon" href="homescreen.png" />
+    <meta name="format-detection" content="telephone=no" />
+    
+    <meta name="viewport" content="width=device-width initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+    <!-- Stylesheets -->
+    <link href='http://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Oswald:400,300,700' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Lato:300,400' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <link href="/assets/css/style.css" media="screen" rel="stylesheet" />
+
+  </head>
+  <body class="admin">
+    <header class="cf">
+      <a href="#" id="logo">Jengnet Admin</a>
+      <nav>
+        <ul>
+          <li><a href="/logout/">Logout</a></li>
+        </ul>
+      </nav>
+    </header>
+    <section id="admin">
+      <div id="sidebar">
+        <ul>
+          <li><a href="/admin/">Admin</a></li>
+          <li><a href="/admin/enquiries">Enquiries</a></li>
+          <li><a href="/admin/articles">Articles</a></li>
+          <li><a href="/admin/comments">Comments</a></li>
+        </ul>
+      </div>
+      <div id="main">
+        <div class="section cf">
+          <h2>Comments</h2>
+          <?php if ( isset($comments) && !empty($comments) ) { ?>
+            <?php foreach ( $comments as $comment ) { ?>
+            <div class="adminItem cf">
+              <div class="left">
+                <span class="date"><?php echo $comment->getDate(); ?></span>
+                <?php if ($comment->isNew()) { ?>
+                <span class="new"><i class="fa fa-check"></i> New</span>
+                <?php } ?>
+              </div>
+              <div class="options">
+                <a class="delete" data-action="delete-comment" data-comment-id="<?php echo $comment->id; ?>" href="#"><span>Delete</span></a>
+                <a class="approve <?php echo $comment->getApprovedClass(); ?>" data-action="approve-comment" data-comment-id="<?php echo $comment->id; ?>" href="#"><i class="fa fa-check"></i><span>Approve</span></a>
+                <a class="reply" data-action="reply-to-comment" data-comment-id="<?php echo $comment->id; ?>" href="#"><i class="fa fa-comment"></i><span>Reply</span></a>
+              </div>
+              <ul>
+                <li class="cf"><span>Name:</span><?php echo $comment->name; ?></li>
+                <li class="cf"><span>Email:</span><?php echo $comment->email; ?></li>
+                <li class="cf"><span>WebSite:</span><?php echo $comment->website; ?></li>
+                <li class="cf"><span>Article:</span><?php echo $comment->article; ?></li>
+                <li class="cf"><span>Comment:</span><?php echo $comment->comment; ?></li>
+              </ul>
+              <div class="replies">
+                <h3>Replies</h3>
+                <?php if (isset($comment->replies) && !empty($comment->replies)) { ?>
+                  <?php foreach($comment->replies as $reply) { ?>
+                    <?php echo $reply->getTemplate(); ?>
+                  <?php } ?>
+                <?php } ?>
+              </div>
+            </div>
+            <?php } ?>
+          <?php } ?>
+        </div>
+      </div>
+    </section>
+  </body>
+  <script type="text/javascript">var nonce = '<?php echo $this->_nonce; ?>';</script>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script type="text/javascript" src="/assets/js/init.js"></script>
+</html>
