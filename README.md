@@ -6,10 +6,10 @@
 
 ####New Enquiry
 
-$enquiry 							= new Enquiry();
-$enquiry->name 				= $_POST['name'];
-$enquiry->email 			= $_POST['email'];
-$enquiry->enquiry 		= $_POST['enquiry'];
+$enquiry 		= new Enquiry();
+$enquiry->name 		= $_POST['name'];
+$enquiry->email 	= $_POST['email'];
+$enquiry->enquiry 	= $_POST['enquiry'];
 
 if ( $enquiry->valid() ) { }
 $errors = $enquiry->getErrors();
