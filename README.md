@@ -2,9 +2,7 @@
 
 ##Example Useage
 
-###PHP
-
-####New Enquiry
+###PHP (New Enquiry)
 
 <pre>
 $enquiry 		= new Enquiry();
@@ -17,9 +15,7 @@ $errors = $enquiry->getErrors();
 $enquiry->save();
 </pre>
 
-###Javascript
-
-####New Enquiry
+###Javascript (New Enquiry)
 
 <pre>
 var enquiry = new Enquiry();
