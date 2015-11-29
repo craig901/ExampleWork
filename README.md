@@ -6,6 +6,7 @@
 
 ####New Enquiry
 
+<pre>
 $enquiry 		= new Enquiry();<br />
 $enquiry->name 		= $_POST['name'];<br />
 $enquiry->email 	= $_POST['email'];<br />
@@ -14,6 +15,7 @@ $enquiry->enquiry 	= $_POST['enquiry'];<br />
 if ( $enquiry->valid() ) { }<br />
 $errors = $enquiry->getErrors();<br />
 $enquiry->save();<br />
+</pre>
 
 ###Javascript
 
