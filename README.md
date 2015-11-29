@@ -6,28 +6,28 @@
 
 ####New Enquiry
 
-$enquiry 		= new Enquiry()<br />
-$enquiry->name 		= $_POST['name'];
-$enquiry->email 	= $_POST['email'];
-$enquiry->enquiry 	= $_POST['enquiry'];
+$enquiry 		= new Enquiry();<br />
+$enquiry->name 		= $_POST['name'];<br />
+$enquiry->email 	= $_POST['email'];<br />
+$enquiry->enquiry 	= $_POST['enquiry'];<br />
 
-if ( $enquiry->valid() ) { }
-$errors = $enquiry->getErrors();
-$enquiry->save();
+if ( $enquiry->valid() ) { }<br />
+$errors = $enquiry->getErrors();<br />
+$enquiry->save();<br />
 
 ###Javascript
 
 ####New Enquiry
 
-var enquiry = new Enquiry();
-enquiry.ename = $('#name').val();
-enquiry.email = $('#email').val();
-enquiry.enquiry = $('#enquiry').val();
-enquiry.nonce = nonce;
+var enquiry = new Enquiry();<br />
+enquiry.ename = $('#name').val();<br />
+enquiry.email = $('#email').val();<br />
+enquiry.enquiry = $('#enquiry').val();<br />
+enquiry.nonce = nonce;<br />
 
-enquiry.valid();
-enquiry.submitEnquiry(function(response)
-{
-  // Callback code here
-});
+enquiry.valid();<br />
+enquiry.submitEnquiry(function(response)<br />
+{<br />
+  // Callback code here<br />
+});<br />
 var errors = enquiry.getErrors();
