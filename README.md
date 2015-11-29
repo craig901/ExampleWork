@@ -1,14 +1,16 @@
 # ExampleWork
 
+This an example app that I have used to build Jengnet. It is based on the MVC pattern and is fairly extendible.
+
 ###Example Useage
 
 ####PHP (Create Enquiry)
 
 <pre>
-$enquiry 		        = new Enquiry();
-$enquiry->name 		  = $_POST['name'];
-$enquiry->email 	  = $_POST['email'];
-$enquiry->enquiry 	= $_POST['enquiry'];
+$enquiry 		= new Enquiry();
+$enquiry->name 		= $_POST['name'];
+$enquiry->email         = $_POST['email'];
+$enquiry->enquiry       = $_POST['enquiry'];
 
 if ( $enquiry->valid() ) {
   $enquiry->save();
