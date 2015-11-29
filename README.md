@@ -1,8 +1,8 @@
 # ExampleWork
 
-##Example Useage
+###Example Useage
 
-###PHP (New Enquiry)
+####PHP (Create Enquiry)
 
 <pre>
 $enquiry 		        = new Enquiry();
@@ -13,6 +13,19 @@ $enquiry->enquiry 	= $_POST['enquiry'];
 if ( $enquiry->valid() ) { }
 $errors = $enquiry->getErrors();
 $enquiry->save();
+</pre>
+
+####PHP (Get Enquiry)
+
+<pre>
+$enquiry = Enquiry::get($id);
+</pre>
+
+####PHP (Delete Enquiry)
+
+<pre>
+$enquiry = Enquiry::get($id);
+$enquiry->delete();
 </pre>
 
 ###Javascript (New Enquiry)
