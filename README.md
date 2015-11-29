@@ -10,9 +10,11 @@ $enquiry->name 		  = $_POST['name'];
 $enquiry->email 	  = $_POST['email'];
 $enquiry->enquiry 	= $_POST['enquiry'];
 
-if ( $enquiry->valid() ) { }
-$errors = $enquiry->getErrors();
-$enquiry->save();
+if ( $enquiry->valid() ) {
+  $enquiry->save();
+} else {
+  $errors = $enquiry->getErrors();
+}
 </pre>
 
 ####PHP (Get Enquiry)
