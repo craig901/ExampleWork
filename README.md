@@ -38,7 +38,7 @@ $enquiry = Enquiry::get($id);
 $enquiry->delete();
 </pre>
 
-###Javascript (New Enquiry)
+###Javascript (Create Enquiry)
 
 <pre>
 var enquiry         = new Enquiry();
@@ -47,10 +47,13 @@ enquiry.email       = $('#email').val();
 enquiry.enquiry     = $('#enquiry').val();
 enquiry.nonce       = nonce;
 
-enquiry.valid();
-enquiry.submitEnquiry(function(response)
-{
-  // Callback code here
-});
-var errors = enquiry.getErrors();
+if ( enquiry.valid() ) {
+  enquiry.submitEnquiry(function(response)
+  {
+    // Do success stuff
+  });
+} else {
+  self.errors = enquiry.getErrors();
+  // Do error stuff
+}
 </pre>
