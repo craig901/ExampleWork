@@ -38,7 +38,7 @@ $enquiry = Enquiry::get($id);
 $enquiry->delete();
 </pre>
 
-###Javascript (Create Enquiry)
+####Javascript (Create Enquiry)
 
 <pre>
 var enquiry         = new Enquiry();
@@ -56,4 +56,18 @@ if ( enquiry.valid() ) {
   self.errors = enquiry.getErrors();
   // Do error stuff
 }
+</pre>
+
+####Javascript (Delete Enquiry)
+
+<pre>
+var enquiry = new Enquiry();
+enquiry.enquiryID = id;
+enquiry.ajaxAction = 'delete-enquiry';
+enquiry.nonce = nonce;
+
+enquiry.deleteEnquiry(function()
+{
+	// Do success stuff
+});
 </pre>
