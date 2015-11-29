@@ -19,6 +19,7 @@ $enquiry->save();<br />
 
 ####New Enquiry
 
+<pre>
 var enquiry = new Enquiry();<br />
 enquiry.ename = $('#name').val();<br />
 enquiry.email = $('#email').val();<br />
@@ -31,3 +32,4 @@ enquiry.submitEnquiry(function(response)<br />
   // Callback code here<br />
 });<br />
 var errors = enquiry.getErrors();
+</pre>
