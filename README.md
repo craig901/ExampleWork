@@ -5,9 +5,9 @@
 ###PHP (New Enquiry)
 
 <pre>
-$enquiry 		= new Enquiry();
-$enquiry->name 		= $_POST['name'];
-$enquiry->email 	= $_POST['email'];
+$enquiry 		        = new Enquiry();
+$enquiry->name 		  = $_POST['name'];
+$enquiry->email 	  = $_POST['email'];
 $enquiry->enquiry 	= $_POST['enquiry'];
 
 if ( $enquiry->valid() ) { }
@@ -18,11 +18,11 @@ $enquiry->save();
 ###Javascript (New Enquiry)
 
 <pre>
-var enquiry = new Enquiry();
-enquiry.ename = $('#name').val();
-enquiry.email = $('#email').val();
-enquiry.enquiry = $('#enquiry').val();
-enquiry.nonce = nonce;
+var enquiry         = new Enquiry();
+enquiry.ename       = $('#name').val();
+enquiry.email       = $('#email').val();
+enquiry.enquiry     = $('#enquiry').val();
+enquiry.nonce       = nonce;
 
 enquiry.valid();
 enquiry.submitEnquiry(function(response)
