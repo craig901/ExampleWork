@@ -1,6 +1,6 @@
 # ExampleWork
 
-This an example app that I have used to build Jengnet. It is based on the MVC pattern and is fairly extendible.
+This an example app that I have used to build Jengnet.co.uk. It is based on the MVC pattern and is fairly extendible.
 
 ###Example Useage
 
