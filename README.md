@@ -17,10 +17,18 @@ if ( $enquiry->valid() ) {
 }
 </pre>
 
-####PHP (Get Enquiry)
+####PHP (Read Enquiry)
 
 <pre>
 $enquiry = Enquiry::get($id);
+</pre>
+
+####PHP (Update Enquiry)
+
+<pre>
+$enquiry = Enquiry::get($id);
+$enquiry->name = "Joe Bloggs";
+$enquiry->save();
 </pre>
 
 ####PHP (Delete Enquiry)
